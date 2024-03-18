@@ -5,23 +5,52 @@
     <title>내 홈페이지</title>
   </head>
   <body>
-    <h1>내 홈페이지</h1>
-    <h2>여기에 내 홈페이지가 제작될 예정</h2>
-    <h3>잘 만들어 봐요</h3>
-    <h4>문단은 &lt;h숫자&gt; 사용해 설정</h4>
-    <h4>글씨는 h뒤의 숫자에 따라 달라짐</h4>
-    <p>문단은 &lt;p&gt; 를 사용해 작성</p>
-    <p>또다른 문단</p>
-    <hr color="purple" size="10">
-    <P>선 긋고 싶다면 &lt;hr&gt; <br>
-    color="purple" size="10" 등으로 컬러, 사이즈 설정 가능</p>
-    <p>공백은 &nbsp;&nbsp;&nbsp; 사용하기</p>
-    <p>다시말해 &amp;nbsp; 사용 <br>
+    <div>
+      <h1>내 홈페이지</h1>
+      <h2>여기에 내 홈페이지가 제작될 예정</h2>
+      <h2>잘 만들어 봐요</h2>
+    </div>
+    <div>
+      <h4>문단은 &lt;h숫자&gt; &lt;/h숫자&gt; 사용해 설정</h4>
+      <h4>글씨는 h뒤의 숫자에 따라 달라짐</h4>
+      <p>문단은 &lt;p&gt; &lt;/p&gt; 를 사용해 작성</p>
+      <p>모든 &lt;기호&gt; 는 &lt;/기호&gt; 로 닫아줘야 함 (br 밑 기타 등등 제외)<br>
+      그냥 닫는 건 &lt; 뒤에 / 써주면 됨</p>
+    </div>
+    <div>
+      <hr color="purple" size="10">
+    </div>
+    <div>
+      <P>선 긋고 싶다면 &lt;hr&gt;<br>
+      color="purple" size="10" 등으로 컬러, 사이즈 설정 가능</p>
+    </div>
+    <div>
+      <p>공백은 &nbsp;&nbsp;&nbsp; 사용하기</p>
+      <p>다시말해 &amp;nbsp; 사용<br>
     또한 &amp;amp; 를 사용해야 &amp; 표기 가능</p>
-    <p>또한 &lt; 는 &amp;lt; 를, <br>
-    &gt; 는 &amp;gt; 를 써 작성</p>
-    <p>문단 띄어쓰기는 <br>
-    문장 끝에 br 쓰기 <br>
-    위 문장 끝에도 br 써서 문단 달라지는 거</p>
+    </div>
+    <div>
+      <p>또한 &lt; 는 &amp;lt; 를,<br>
+      &gt; 는 &amp;gt; 를 써 작성</p>
+    </div>
+    <div>
+      <p>문단 띄어쓰기는<br>
+      문장 끝에 &lt;br&gt; 쓰기<br>
+      위 문장 끝에도 &lt;br&gt; 써서 문단 달라지는 거</p>
+    <div>
+      <p>문단은 항상 &lt;div&gt;로 열고 닫아야 한 컨테이너가 됨<br>
+      (애드블록 쓰면 나오는 그 컨테이너)</p>
+      </div>
+      <p> 스펜 써보기, <span>이 글은 스펜이 걸림</span></p>
+    <div>
+      <P>툴팁 써보기</P>
+      <p title="각주 써보기">이거 위에 마우스 올리면 각주가 나옴<br>
+      잘 안나옴, https://wikidocs.net/161419 참조</p>
+    </div>
+    <div>
+      <h1>이미지 써보기</h1>
+      <img src="https://wikidocs.net/images//book/wikidocs_1_5nYDT0Q.png">
+      <p>위엔 위키독스라는 가져와 본 거 (https://wikidocs.net/163736 참조)</p>
+    </div>
   </body>
 </html>
