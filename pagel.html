@@ -11,20 +11,62 @@
       <hr color="purple" size="10">
     </div>
     <div>
-      <h3>여기는 다음페이지 입니다.</h3>
+      <h3>여기는 개인정보 입력 페이지 입니다.</h3>
     <div>
-      <a href="index.html" target="_self">이전 페이지로</a>
+      <a href="index.html" target="_self">홈페이지로</a><br>
+      <a href="pagel2.html" target="_self">개인정보 입력 페이지로</a>
     </div>
     <div>
       <ol>
-        <li>이러면 1 나옴</li>
-        <li>이러면 2 나옴</li>
-        <li>이러면 3 나옴</li>
+        <li><a href="https://www.google.com/search?q=1" target="_blank">이러면 1 나옴</a></li>
+        <li><a href="https://www.google.com/search?q=2" target="_blank">이러면 2 나옴</a></li>
+        <li><a href="https://www.google.com/search?q=3" target="_blank">이러면 3 나옴</a></li>
       </ol>
     </div>
     <div>
       <img src="img/mine.png" width="200"><br>
       <span>내 사진임</span>
+    </div>
+    &nbsp;
+    <div>
+      <figcaption>
+        <strong>fig캡션 (뭔차이)</strong>
+      </figcaption>
+      <table border="10">
+        <tr>
+          <caption>
+            <strong>굵은 캡션</strong><br>
+            안굵은 부캡
+          </caption>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>여기 뭔가를 쓰면 칸이 안맞음</th>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <p>입력폼 미쳤다</p>
+      <input><br>
+      <input>
+    </div>
+    <div>
+      <h3>type="text"</h3>
+      <a title="최대 5자 입력 가능"><input type="text" placeholder="텍스트를 입력하세요" maxlength="5" size="20"></a>
+    </div>
+    <div>
+      <h3>type="text" & type="password"</h3>
+      <a title="텍스트가 그대로 나옴"><input type="text" placeholder="아이디를 입력하세요 (캡션 적용됨)" size="28"></a><br>
+      <a title="텍스트가 화면에 안나옴"><input type="password" placeholder="비밀번호를 입력하세요 (캡션 적용됨)" size="28"></a>
+    </div>
+    <div>
+      <h3>type="number"</h3>
+      <a>사과<input type="number" min="0" max="10" step="1">개 주세요!</a>
     </div>
   </body>
 </html>
