@@ -1,0 +1,71 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS 홈페이지</title>
+  </head>
+  <body>
+    <div>
+      <h1>CSS 홈페이지</h1>
+    </div>
+    <div>
+      <hr color="purple" size="10">
+    </div>
+    <div>
+      <h3>여기는 CSS페이지 입니다.</h3>
+    <div>
+      <a href="index.html" target="_self">홈페이지로</a><br>
+      <a href="pagel.html" target="_self">이전 페이지로</a><br>
+      <a href="pagel2.html" target="_self">개인정보 페이지로</a>
+    </div>
+    <div>
+      <p>스타일 안들어간 문단</p>
+      <p style="color: blue;">글자색 변경</p>
+    </div>
+    <style>
+    h4{color: red;}
+    /* p{color: red;} */ /* 주석처리 */
+    </style>
+    <h4>이거 빨간색임?</h4>
+    <style>
+      h1.turtle{
+        color: green;
+      }
+      .character{
+        color: blue;
+      }
+      #abc{
+        color: aqua;
+      }
+    </style>
+    <div>
+      <h1 class="turtle">거북이</h1>
+      <p>
+      <strong class="character">파충강 거북목 동물의 총칭.</strong> <br>
+    지구상에 서식하는 <span class="character">파충류</span> 중 가장 오래 전부터 존재해온 동물 중 하나로 평가되며, <br>
+    가장 오래된 화석종으로는 <span class="character">중생대 트라이아스기</span> 이후의 지층에서 발견되었다. 
+    <p>.클래스 #아이디 통해 원하는 텍스트만 입력 가능<br>
+    #아이디는 딱 하나만 입력 가능</p>
+    <p id="abc">이렇게</p>
+      </p>
+    </div>
+    <!--<style>
+      p{
+        width: 120px;
+        height: 120px;
+      }
+      .red{
+        border-width: 5px; 
+        border-style: solid; 
+        border-color: red;
+      }
+      .green{
+        /* 단축속성은 공백으로 각 속성값을 구분합니다. */
+        border: 5px solid green; 
+      }
+    </style>-->
+    <div>
+      <p class="red">삵은 고양잇과 포유류로, 산골짜기 개울가에 주로 산다.</p>
+      <p class="green">삵은 고양잇과 포유류로, 산골짜기 개울가에 주로 산다.</p>
+    </div>
+  </body>
+</html>
