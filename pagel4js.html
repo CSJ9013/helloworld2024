@@ -19,7 +19,19 @@
     </div>
     <div>
         <script>
-            alert( 'Hello, world!' );
+            'use strict'; /* 엄격 모드, 코드 실행이 좀 더 '모던'해짐
+            (JS 창시자가 저지른 실수 및 애매한 코드 비활성화, 2009 ECMAScript5(ES5) 등장으로 생김, 코드 실수에 대한 패치를 따로 활성화 시켜주는 것)
+            Ex. let 없이 변수 선언 불가 등 */
+            //스크립트에선 이게 주석
+            /* 이러면
+            여러줄에 거쳐
+            주석 (css와 동일) */
+            //alert( 'Hello, world!' ); // Hello, world! 출력, 알림 귀찮아서 꺼둠
+            console.log("Hello, World!"); // ctrl+shift+i 시 나오는 console 창에 Hello, World! 출력
+            let userName = "USER"; // 변수 선언
+            let admin; // 변수 선언
+            admin = userName; // 변수 값 대입
+            //alert(admin); //알림 출력
         </script>
     </div>
   </body>
