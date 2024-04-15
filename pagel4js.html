@@ -30,8 +30,12 @@
             console.log("Hello, World!"); // ctrl+shift+i 시 나오는 console 창에 Hello, World! 출력
             let userName = "USER"; // 변수 선언
             let admin; // 변수 선언
-            admin = userName; // 변수 값 대입
+            admin = userName; // 변수 값 복사&대입
             //alert(admin); //알림 출력
+            //alert('안녕' + admin); // 안녕+USER 알림 출력
+            //alert( `Hello, ${admin}!` ); // Hello, USER! 좀 더 모던한 출력
+            let age = prompt('나이를 입력해주세요.', 100); // 프롬프트 사용 - 텍스트 입력 창 띄우기
+            alert(`당신의 나이는 ${age}살 입니다.`); // 작성한 나이 출력, default = 100
         </script>
     </div>
   </body>
