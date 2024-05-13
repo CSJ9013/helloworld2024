@@ -1,0 +1,84 @@
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>js2 홈페이지</title>
+  </head>
+  <body>
+    <div>
+      <h1>js2 홈페이지</h1>
+    </div>
+    <div>
+      <hr color="purple" size="10">
+    </div>
+    <div>
+      <h3>여기는 js페이지2 입니다.</h3>
+    <div>
+      <a href="index.html" target="_self">홈페이지로</a><br>
+      <a href="pagel.html" target="_self">이전 페이지로</a><br>
+      <a href="pagel3css.html" target="_self">css 페이지로</a>
+    </div>
+    <div>
+        <script>
+            'use strict'; /* 엄격 모드, 코드 실행이 좀 더 '모던'해짐
+            (JS 창시자가 저지른 실수 및 애매한 코드 비활성화, 2009 ECMAScript5(ES5) 등장으로 생김, 코드 실수에 대한 패치를 따로 활성화 시켜주는 것)
+            Ex. let 없이 변수 선언 불가 등 */
+            //스크립트에선 이게 주석
+            /* 이러면
+            여러줄에 거쳐
+            주석 (css와 동일) */
+            //alert( 'Hello, world!' ); // Hello, world! 출력, 알림 귀찮아서 꺼둠
+            console.log("Hello, World!"); // ctrl+shift+i 시 나오는 console 창에 Hello, World! 출력
+            
+            // 이름, 나이, 당신 학생 확인 취소 (20살 이상만 뜨게 함), 후 정보 한꺼번에 출력, 8 이상 13 이하 초등학생, 14 이상 16 이하 중학생, 17 이상 19 이하 고등학생, 20세 이상 대학생
+            let name = prompt('이름을 입력해주세요.');
+            if (name == null) {
+                alert('입력하지 않으셨습니다.');
+            } 
+            else if (name >= 0 ) {
+                alert(`숫자를 입력하셨습니다.`);
+            }
+            else if (name < 0 ) {
+                alert(`숫자를 입력하셨습니다.`);
+            }
+            else {
+              let age = prompt('나이를 입력해주세요');
+                if (age == null) {
+                  alert('입력하지 않으셨습니다.');
+                }
+                else if (age < 0 ) {
+                  alert(`정상 숫자를 입력해주세요.`);
+                }
+                else if (age >= 0) {
+                  let student = confirm('당신은 학생인가요?');
+                    if (student == false) {
+                      alert(`당신의 이름은 ${name}, 나이는 ${age}살 입니다.`);
+                    }
+                    else if (student == true) {
+                      let Identity
+                      if (0 <= age && age <= 7) {
+                        Identity = '아기';
+                      }
+                      else if (8 <= age && age <= 13) {
+                        Identity = '초등학생';
+                      }
+                      else if (14 <= age && age <= 16) {
+                        Identity = '중학생';
+                      }
+                      else if (17 <= age && age <= 19) {
+                        Identity = '고등학생';
+                      }
+                      else if (20 <= age) {
+                        Identity = '대학생';
+                      }
+                      alert(`당신의 이름은 ${name}, ${age}살 ${Identity}입니다.`);
+                    }
+                }
+                else {
+                  alert('숫자를 입력하시길 바랍니다.')
+                }
+            }
+            
+        </script>
+    </div>
+  </body>
+</html>

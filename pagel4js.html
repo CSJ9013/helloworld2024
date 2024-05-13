@@ -40,8 +40,11 @@
             if (age == null) {
                 alert('나이를 입력하지 않으셨습니다.')
             }
-            else {
+            else if (age > 0) {
                 alert(`당신의 나이는 ${age}살 입니다.`); // 작성한 나이 출력, default = 100
+            }
+            else {
+              alert('나이를 입력하시길 바랍니다.')
             }
 
             let isBoss = confirm("당신이 주인인가요?"); // 확인&취소 선택
@@ -51,6 +54,9 @@
             }
             else if (isBoss == false) {
                 alert( '취소를 누르셨습니다.' )
+            }
+            else {
+              alert('확인되지 않았습니다.')
             }
 
             let year = prompt('ECMAScript-2015 명세는 몇 년도에 출판되었을까요?', '');
@@ -78,6 +84,20 @@
             }
             else {
                 alert( '오답입니다!'); // 오답문 (숫자 제외 입력 시) 출력
+            }
+
+            let age2 = prompt('당신은 몇살인가요?')
+            if (age2 == null) {
+              alert('나이를 입력하시길 바랍니다.')
+            }
+            else if (age2 <= 15) {
+              alert('15세 이상은 입장 가능입니다.')
+            }
+            else if (age2 > 15) {
+              alert('15세 미만은 입장 불가능입니다.')
+            }
+            else {
+              alert('확인되지 않았습니다.')
             }
         </script>
     </div>
