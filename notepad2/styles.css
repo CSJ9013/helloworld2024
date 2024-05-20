@@ -1,0 +1,116 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #555;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 300px; /* 높이를 더 크게 조정 */
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0; /* 사각형 모서리 */
+    resize: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  button:hover {
+    background-color: #4a90e2;
+  }
+  
+  #shareUrl {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 14px;
+  }
+  
+  #copyMessage {
+    color: #4CAF50;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* 검은색 테마 */
+  .dark-theme {
+    background-color: #222 !important;
+    color: #fff !important;
+  }
+  
+  .dark-theme header {
+    background-color: #111 !important;
+    border-bottom: 4px solid #333 !important;
+  }
+  
+  .dark-theme button {
+    background-color: #4a90e2 !important; /* 파란색 */
+  }
+  
+  .dark-theme button:hover {
+    background-color: #357ae8 !important; /* 진한 파란색 */
+  }
+  /* 텍스트 작성 창 배경색 */
+textarea {
+    background-color: #f2f2f2; /* 기본 배경색 */
+  }
+  
+  .dark-theme textarea {
+    background-color: #555; /* 테마 변경 시 배경색 */
+  }
+  /* 텍스트 작성 창 테두리 색상 */
+textarea {
+    border-color: #ccc; /* 기본 테두리 색상 */
+  }
+  
+  .dark-theme textarea {
+    border-color: #888; /* 테마 변경 시 테두리 색상 */
+  }
+/* 공유 URL 링크 색상 */
+#shareUrl a {
+    color: #007bff; /* 기본 링크 색상 (파란색) */
+  }
+  
+  .dark-theme #shareUrl a {
+    color: #ff6600; /* 테마 변경 시 링크 색상 (주황색) */
+  }
+/* 흰색 테마일 때 메모 텍스트 색상 */
+textarea {
+    color: #000; /* 흰색 테마일 때 텍스트 색상 (검은색) */
+  }
+  
+  .dark-theme textarea {
+    color: #fff; /* 검은색 테마일 때 텍스트 색상 (흰색) */
+  }
+      
+  
