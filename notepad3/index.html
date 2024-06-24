@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleMemo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SimpleMemo</h1>
+        <div>
+            <button id="themeToggle" class="btn"><i class="fas fa-adjust"></i></button>
+            <button id="saveAllNotes" class="btn">모든 메모 저장</button>
+            <button id="refreshApp" class="btn btn-danger"><i class="fas fa-sync-alt"></i> 새로고침</button>
+        </div>
+    </header>
+    <main>
+        <section id="folders">
+            <h2>폴더 <button id="newFolder" class="btn btn-small"><i class="fas fa-plus"></i></button></h2>
+            <select id="folderSort">
+                <option value="custom">사용자 정의</option>
+                <option value="name">이름순</option>
+                <option value="date">생성일순</option>
+            </select>
+            <ul id="folderList"></ul>
+        </section>
+        <section id="notes">
+            <h2>메모 <button id="newNote" class="btn btn-small"><i class="fas fa-plus"></i></button></h2>
+            <input type="text" id="searchInput" placeholder="메모 검색...">
+            <select id="noteSort">
+                <option value="custom">사용자 정의</option>
+                <option value="name">이름순</option>
+                <option value="date">생성일순</option>
+            </select>
+            <ul id="noteList"></ul>
+        </section>
+        <section id="editor">
+            <textarea id="editorContainer"></textarea>
+            <div id="controls">
+                <button id="saveNote" class="btn"><i class="fas fa-save"></i> 저장</button>
+                <button id="shareNote" class="btn"><i class="fas fa-share"></i> 공유</button>
+                <button id="exportNote" class="btn"><i class="fas fa-file-export"></i> 내보내기</button>
+                <input type="file" id="importNote" accept=".txt,.html,.md">
+                <label for="importNote" class="btn"><i class="fas fa-file-import"></i> 가져오기</label>
+                <input type="text" id="tagInput" placeholder="태그 추가 (쉼표로 구분)">
+                <div class="save-container">
+                    <div id="saveNotification" class="save-notification"></div>
+                </div>
+            </div>
+            <div id="tagContainer"></div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
