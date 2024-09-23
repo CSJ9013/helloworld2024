@@ -6,4 +6,3 @@ print(random.random())
 menu = "치킨", "피자", "김밥", "탕수육"
 print(random.choice(menu))
 import Requests
-python3
