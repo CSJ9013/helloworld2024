@@ -11,10 +11,21 @@ from bs4 import BeautifulSoup
 
 # 웹 접속
 headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
-r = requests.get("https://www.melon.com/", headers=headers)
-print(r) # 접속이 잘 됐는 지 확인
+data = requests.get("https://www.melon.com/", headers=headers)
+print(data) # 접속이 잘 됐는 지 확인
 
 # html 정보 가져오기
-soup = BeautifulSoup(r.text, 'html.parser')
+soup = BeautifulSoup(data.text, 'html.parser')
  
-print(soup) # 가져온 html 정보 출력
+# 가져온 html 정보 출력 / 주석처리 이유는 밑에 타이틀을 출력 중이기에
+# print(soup)
+
+headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
+data = requests.get('https://www.melon.com/chart/',headers=headers)
+soup = BeautifulSoup(data.text, 'html.parser')
+title = soup.select_one('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank01 > span > a ')
+
+print(title)
+
+# 제목만 가져오기
+print(title.text)
