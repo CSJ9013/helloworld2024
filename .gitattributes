@@ -1,6 +1,6 @@
-# 깃허브 언어 인식 문제 개선 / 인식 불가 문제 생겨 주석 처리
-# api/include/** linguist-vendored
-# python3/myenv/** linguist-vendored
+# 깃허브 언어 인식 문제 개선
+api/include/** linguist-vendored
+python3/myenv/** linguist-vendored
 
 # 빌드나 문서화 출력물로 인해 프로젝트 언어가 잘못 표시되는 경우라면
 # api/include/** linguist-generated
