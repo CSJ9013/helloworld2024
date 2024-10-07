@@ -9,10 +9,10 @@ data = requests.get('https://www.melon.com/chart/',headers=headers)
 soup = BeautifulSoup(data.text, 'html.parser')
 # 순위 및 아티스트 정보 가져오기
 # title = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank01 > span > a')
-# aritst = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a')
+# artist = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a')
 # 출력
 # for i in range(0,50) :
-    # print(f'{i+1}위 {title[i].text} - {aritst[i].text}')
+    # print(f'{i+1}위 {title[i].text} - {artist[i].text}')
 
 # 리스트 변수
 rank = []
@@ -26,7 +26,7 @@ for t in title:
     tlist.append(t.text)
 # 가수 리스트 만들기
 alist = []
-aritst = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a:nth-child(1)')
+artist = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a:nth-child(1)')
 for a in artist:
     alist.append(a.text)
 

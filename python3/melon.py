@@ -36,13 +36,13 @@ print(title.text)
 
 # 여러개 출력 - 간단하게 (50위까지 - 최대임)
 title = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank01 > span > a')
-aritst = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a')
+artist = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a')
 # for t in title : 
     # print(t.text)
 for i in range(0,50) :
     # if artist[i].text == '임영웅' : # 특정 가수만 출력
     # if artist[i].text != '임영웅' : # 특정 가수 뺴고 출력
-    print(f'{i+1}위 {title[i].text} - {aritst[i].text}')
+    print(f'{i+1}위 {title[i].text} - {artist[i].text}')
 
 # 다른 방식의 출력
 top_100 = soup.select('#lst50 > td > div')
