@@ -34,15 +34,20 @@ print(title)
 # 제목만 가져오기
 print(title.text)
 
-# 여러개 출력
+# 여러개 출력 - 간단하게 (50위까지 - 최대임)
 title = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank01 > span > a')
-for t in title : 
-    print(t.text)
+aritst = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a')
+# for t in title : 
+    # print(t.text)
+for i in range(0,50) :
+    # if artist[i].text == '임영웅' : # 특정 가수만 출력
+    # if artist[i].text != '임영웅' : # 특정 가수 뺴고 출력
+    print(f'{i+1}위 {title[i].text} - {aritst[i].text}')
 
-# 전문적 출력
+# 다른 방식의 출력
 top_100 = soup.select('#lst50 > td > div')
 
-# tr로 이루어진 list
+# tr로 이루어진 list (tr은 테이블 만들 때 등의 html 태그, 여기선 반복 변수)
 for tr in top_100 :
     rank = tr.select_one('span.rank')
         
