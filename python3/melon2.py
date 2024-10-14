@@ -16,17 +16,17 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 # 리스트 변수
 rank = []
-for i in range(1,101) :
+for i in range(1,101):
     rank.append(i)
 print(rank)
 # 제목 리스트 만들기
 tlist = []
-title = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank01 > span > a')
+title = soup.select('div.ellipsis.rank01 > span > a')
 for t in title:
     tlist.append(t.text)
 # 가수 리스트 만들기
 alist = []
-artist = soup.select('#lst50 > td:nth-child(6) > div > div > div.ellipsis.rank02 > a:nth-child(1)')
+artist = soup.select('div.ellipsis.rank02 > span > a:nth-child(1)')
 for a in artist:
     alist.append(a.text)
 
@@ -34,4 +34,4 @@ df3 = pd.DataFrame({'순위': rank,
                     '제목': tlist,
                     '가수': alist})
 
-df3.to_csv('melon100.csv', index=False)
+df3.to_csv('melontop100.csv', index=False)
