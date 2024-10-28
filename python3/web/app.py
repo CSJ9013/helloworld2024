@@ -21,7 +21,7 @@ def method():
     else:
         num = request.form["num"]
         name = request.form["name"]
-        return "POST로 전달된 데이터({}, {})".format(num, name)
+        return f"POST로 전달된 데이터({keyword}, {})".format(num, name)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
