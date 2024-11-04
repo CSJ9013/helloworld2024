@@ -19,9 +19,12 @@ def search():
     return render_template("search.html")
 
 @app.route('/method', methods=['GET', 'POST'])
+#GET 요청: 사용자가 URL에 직접 접근했을 경우
+#POST 요청: 사용자가 폼을 제출한 경우
 def method():
+    # if, elif, else 순서
     if request.method == 'GET':
-        return "GET으로 전달"
+        return "폼을 통해 접근해 주시길 바랍니다."
     else:
         keyword = request.form["keyword"]
         print(keyword)
@@ -30,6 +33,19 @@ def method():
     #    num = request.form["num"]
     #    name = request.form["name"]
     #    return f"POST로 전달된 데이터({keyword})".format(num, name)
+
+@app.route('/ytpage')
+def ytpage():
+    return render_template("ytpage.html")
+
+@app.route('/ytresult', methods=['GET', 'POST'])
+def ytresult():
+    if request.method == 'GET':
+        return "폼을 통해 접근해 주시길 바랍니다."
+    else:
+        keyword = request.form["keyword"]
+        print(keyword)
+        return render_template("youtube.html", data=keyword)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
