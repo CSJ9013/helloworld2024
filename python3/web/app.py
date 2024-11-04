@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, render_template
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,7 +11,7 @@ def baseball():
     return 'Hello, baseball!'
 
 @app.route('/search')
-def searchhtml():
+def search():
     return render_template("search.html")
 
 @app.route('/method', methods=['GET', 'POST'])
@@ -19,9 +19,13 @@ def method():
     if request.method == 'GET':
         return "GET으로 전달"
     else:
-        num = request.form["num"]
-        name = request.form["name"]
-        return f"POST로 전달된 데이터({keyword})".format(num, name)
+        keyword = request.form["keyword"]
+        print(keyword)
+        return f"POST로 전달된 입력어: {keyword}"
+    #else:
+    #    num = request.form["num"]
+    #    name = request.form["name"]
+    #    return f"POST로 전달된 데이터({keyword})".format(num, name)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
