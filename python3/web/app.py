@@ -10,6 +10,10 @@ def hello():
 def baseball():
     return 'Hello, baseball!'
 
+@app.route('/youtube')
+def youtube():
+    return render_template("youtube.html")
+
 @app.route('/search')
 def search():
     return render_template("search.html")
