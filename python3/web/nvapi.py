@@ -6,7 +6,7 @@ import urllib.request
 import ssl
 
 def blog(keyword) :
-    ssl._create_default_https_context = sl._create_unverified_context
+    ssl._create_default_https_context = ssl._create_unverified_context
     # api 코드는 커밋 제외
     client_id = "YOUR_CLIENT_ID"
     client_secret = "YOUR_CLIENT_SECRET"
