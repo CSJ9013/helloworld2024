@@ -1,4 +1,6 @@
 from flask import Flask, request, render_template
+import nvapi
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -28,7 +30,9 @@ def method():
     else:
         keyword = request.form["keyword"]
         print(keyword)
-        return f"POST로 전달된 입력어: {keyword}"
+        data = nvapi.blog(keyword)
+        # return f"POST로 전달된 입력어: {keyword}"
+        return render_template("nvresult.html", keyword=keyword, blist=data)
     #else:
     #    num = request.form["num"]
     #    name = request.form["name"]
