@@ -19,7 +19,7 @@ def hello2() :
     dmenu = {"메뉴": "짜장면", "가격": 5000} # 중괄호 딕셔너리
     return menu
 
-# menu = hello2()
-# print(menu)
-# for m in menu:
-#     print(m)
+menu = hello2()
+print(menu)
+for m in menu:
+    print(m)
