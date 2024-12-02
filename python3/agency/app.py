@@ -1,3 +1,9 @@
+# python3 -m venv env
+# pip install flask
+# pip install --upgrade pip
+# source myenv/bin/activate
+# 위에 입력해 env 및 플라스크 설치 필요 (env 제거함)
+
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
