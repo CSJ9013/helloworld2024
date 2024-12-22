@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 기반 브라우저 - 설정</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <button class="back-button" aria-label="뒤로가기">뒤로</button>
+            <h1>설정</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="accessibility-settings">
+            <h2>접근성 설정</h2>
+            <label for="text-size">텍스트 크기:</label>
+            <input type="range" id="text-size" min="10" max="30" step="1" aria-label="텍스트 크기 조정">
+
+            <label for="screen-zoom">화면 확대:</label>
+            <input type="range" id="screen-zoom" min="100" max="200" step="10" aria-label="화면 확대">
+
+            <label for="color-contrast">색상 대비:</label>
+            <input type="range" id="color-contrast" min="0" max="100" step="10" aria-label="색상 대비 조정">
+
+            <label for="voice-speed">음성 속도:</label>
+            <input type="range" id="voice-speed" min="0.5" max="2" step="0.1" aria-label="음성 속도 조정">
+        </section>
+
+        <section class="customization-settings">
+            <h2>사용자 맞춤 설정</h2>
+            <label for="bookmarks">즐겨찾기 관리:</label>
+            <input type="text" id="bookmarks" placeholder="즐겨찾기 웹사이트 입력" aria-label="즐겨찾기 추가">
+
+            <label for="notifications">알림 설정:</label>
+            <input type="checkbox" id="notifications" aria-label="알림 설정"> 알림 받기
+        </section>
+    </main>
+
+    <footer>
+        <button class="save-button" aria-label="저장">저장</button>
+        <button class="restore-button" aria-label="기본값 복원">기본값 복원</button>
+        <button class="help-button" aria-label="도움말">도움말</button>
+    </footer>
+</body>
+
+</html>

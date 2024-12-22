@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 기반 브라우저 - 검색</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <button class="back-button" aria-label="뒤로가기">뒤로</button>
+            <h1>검색</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-container">
+            <label for="search-box" class="sr-only">검색어를 입력하세요</label>
+            <input type="text" class="search-box" id="search-box" placeholder="검색어를 입력하세요" aria-label="검색어 입력">
+            <button class="search-button" aria-label="검색">검색</button>
+        </section>
+
+        <section class="search-results">
+            <h2>검색 결과</h2>
+            <ul id="results-list">
+                <li>검색 결과 1</li>
+                <li>검색 결과 2</li>
+                <li>검색 결과 3</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <button class="reload-button" aria-label="새로 고침">새로 고침</button>
+        <button class="help-button" aria-label="도움말">도움말</button>
+    </footer>
+</body>
+
+</html>

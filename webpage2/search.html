@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 기반 브라우저 - 검색</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <button class="back-button" onclick="window.history.back()" aria-label="뒤로 가기">뒤로</button>
+            <input type="text" id="search-box" placeholder="검색어를 입력하세요" aria-label="검색창">
+            <button class="voice-recognition-button" aria-label="음성 인식">🎤</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="search-results">
+            <h2>검색 결과</h2>
+            <ul>
+                <li>검색 결과 1</li>
+                <li>검색 결과 2</li>
+                <li>검색 결과 3</li>
+            </ul>
+        </section>
+
+        <section class="recommended-searches">
+            <h3>추천 검색어</h3>
+            <ul>
+                <li>추천 검색어 1</li>
+                <li>추천 검색어 2</li>
+                <li>추천 검색어 3</li>
+            </ul>
+        </section>
+
+        <section class="search-filters">
+            <h3>검색 결과 필터링</h3>
+            <label for="date-filter">날짜:</label>
+            <input type="date" id="date-filter">
+
+            <label for="type-filter">유형:</label>
+            <select id="type-filter">
+                <option value="all">모두</option>
+                <option value="articles">기사</option>
+                <option value="videos">영상</option>
+            </select>
+        </section>
+
+        <section class="ai-summary">
+            <button class="ai-summary-button" aria-label="AI 요약 제공">AI 요약 제공</button>
+        </section>
+    </main>
+
+    <footer>
+        <button class="voice-feedback-button" aria-label="음성 피드백">음성 피드백</button>
+        <button class="refresh-button" aria-label="새로 고침">새로 고침</button>
+        <button class="help-button" aria-label="도움말">도움말</button>
+    </footer>
+</body>
+
+</html>

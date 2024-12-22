@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 기반 브라우저 - 홈페이지</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <button class="accessibility-button" aria-label="접근성 설정">접근성 설정</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <h1>스크린텔러</h1>
+            <label for="search-box" class="sr-only">검색어를 입력하세요</label>
+            <input type="text" class="search-box" id="search-box" placeholder="검색어를 입력하세요"
+                aria-describedby="search-instructions">
+            <div class="buttons-container">
+                <button class="search-button" onclick="performSearch()" aria-label="검색 버튼">검색</button>
+                <button class="voice-feedback-button" aria-label="음성 피드백">음성 피드백</button>
+            </div>
+        </div>
+
+        <section class="recommended-content">
+            <h2>추천 콘텐츠</h2>
+            <ul>
+                <li>추천 콘텐츠 1</li>
+                <li>추천 콘텐츠 2</li>
+                <li>추천 콘텐츠 3</li>
+            </ul>
+        </section>
+
+        <section class="frequent-sites">
+            <h2>자주 방문한 사이트</h2>
+            <ul>
+                <li>사이트 1</li>
+                <li>사이트 2</li>
+                <li>사이트 3</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <!-- 설정 버튼과 도움말 버튼을 함께 배치 -->
+        <div class="footer-buttons">
+            <button class="settings-button" onclick="window.location.href='settings.html'"
+                aria-label="설정 페이지로 이동">설정</button>
+            <button class="help-button" aria-label="도움말">도움말</button>
+        </div>
+    </footer>
+
+    <script>
+        function performSearch() {
+            let query = document.getElementById('search-box').value;
+            alert('검색 결과: ' + query);  // 검색 결과 동작 예시 (실제 API 연동 필요)
+        }
+    </script>
+</body>
+
+</html>

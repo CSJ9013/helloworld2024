@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 기반 브라우저 - 홈페이지</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <input type="text" id="search-box" placeholder="검색어를 입력하세요" aria-label="검색창">
+            <button class="voice-recognition-button" aria-label="음성 인식">🎤</button>
+            <button class="accessibility-tools" aria-label="접근성 도구">접근성</button>
+            <button class="settings-button" onclick="window.location.href='settings.html'" aria-label="설정">설정</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="ai-chat">
+            <h2>AI 대화형 검색</h2>
+            <textarea placeholder="AI와 대화해보세요..." aria-label="AI 대화"></textarea>
+        </section>
+
+        <section class="recommended-content">
+            <h2>추천 콘텐츠</h2>
+            <ul>
+                <li>추천 콘텐츠 1</li>
+                <li>추천 콘텐츠 2</li>
+                <li>추천 콘텐츠 3</li>
+            </ul>
+        </section>
+
+        <section class="frequent-sites">
+            <h2>자주 방문한 사이트</h2>
+            <ul>
+                <li>사이트 1</li>
+                <li>사이트 2</li>
+                <li>사이트 3</li>
+            </ul>
+        </section>
+
+        <section class="ai-summary">
+            <h2>AI 요약 기능</h2>
+            <button class="ai-summary-button" aria-label="AI 요약 시작">AI 요약 시작</button>
+        </section>
+    </main>
+
+    <footer>
+        <button class="voice-feedback-button" aria-label="음성 피드백">음성 피드백</button>
+        <button class="help-button" aria-label="도움말">도움말</button>
+    </footer>
+
+    <script>
+        // 예시로 AI 대화 및 음성 인식 처리할 수 있는 기능 추가
+        document.querySelector('.voice-recognition-button').addEventListener('click', function () {
+            alert('음성 인식이 시작됩니다');
+        });
+    </script>
+</body>
+
+</html>
